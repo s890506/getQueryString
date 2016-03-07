@@ -5,9 +5,7 @@ var getQueryString = (function() {
         init: function(){
             //擷取 Query String 之參數
             var hashMap;
-            var stringArray = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');       
-            
-            console.log(stringArray);         
+            var stringArray = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');   
             
             for(var i = 0; i < stringArray.length; i++)
             {
@@ -19,10 +17,10 @@ var getQueryString = (function() {
             return true;
         }, // end init()
         
-        getParameter: function(input) {        
+        getParameter: function(input) {
             
-            if (vars.length == 1)
-                return 'There are no query string.';
+            if (vars.indexOf(input) == -1)
+                return null;
                 
             return vars[input]; 
         }
