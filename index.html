@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>getQueryString example</title>
+    </head>
+    <body>
+        <h1>This is a getQueryString example.</h1>
+        <script src="getQueryString.js"></script>
+        <script>
+            getQueryString.init(); //建構子
+
+            //開始取得參數
+            var id = getQueryString.getParameter('id');
+            var name = getQueryString.getParameter('name');
+            
+            console.log('id:' + id);
+            console.log('name:' + name);
+        </script>
+    </body>
+</html>
